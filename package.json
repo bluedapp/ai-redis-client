@@ -1,0 +1,47 @@
+{
+  "name": "ai-redis-client",
+  "version": "0.0.1",
+  "description": "A redis tools for nodejs and want to look for a girlfriend...",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "directories": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meizikeai/ai-redis-client.git"
+  },
+  "engines": {
+    "node": ">=8.11.2"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "utils/cache.js",
+    "utils/interval-cache-store.js"
+  ],
+  "keywords": [
+    "redis",
+    "redis-client",
+    "ai-redis-client"
+  ],
+  "author": "meizikeai@163.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meizikeai/ai-redis-client/issues"
+  },
+  "homepage": "https://github.com/meizikeai/ai-redis-client",
+  "dependencies": {
+    "redis": "^2.8.0",
+    "redis-commands": "^1.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
