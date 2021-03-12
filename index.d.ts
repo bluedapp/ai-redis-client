@@ -1,14 +1,15 @@
 interface Config {
   key?: string
-  option: any
   time?: number
+  option: any
 }
 
 interface Redis {
-  host: string
-  port: string
+  master: Array<string>
+  password?: string
+  db?: number
 }
 
-declare function aiRedisClient(config: Config | Redis, cache?: string)
+declare function getRedisPool(config: Config | Redis, key?: string)
 
-export = aiRedisClient
+export = getRedisPool

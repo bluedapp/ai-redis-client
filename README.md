@@ -2,7 +2,7 @@
 
 [![npm version][npm-image]][npm-url]
 
-A redis tools for nodejs and want to look for a girlfriend...
+A redis client tools for nodejs and want to look for a girlfriend...
 
 ## Installation
 
@@ -14,28 +14,23 @@ $ npm i ai-redis-client
 
 ``` js
 const redisClient = key => {
-  if (!(key in datum)) {
-    throw new Error(`Can not find the key: [${key}]`)
-  }
-
-  // use https://www.npmjs.com/package/@blued-core/qconf
-  return createRedisClient({ key, option: qconf })
+  // https://www.npmjs.com/package/@blued-core/qconf
+  return createRedisClient({ key, option: qconf })()
 
   // or
-
-  return createRedisClient({ host: '10.10.0.20', port: '6379' }, key)
+  return createRedisClient({ master: ['127.0.0.1:6379'] }, key)()
 }
 
 async function getTest () {
-  const userRedis = redisClient('userRedis')()
+  const userRedis = redisClient('user')
 
-  const data = await userRedis.hgetall('u:113').catch(err => {
+  const res = await userRedis.hgetall('u:113').catch(err => {
     console.error(err, { tips: 'test -> hgetall error' })
   })
 
-  console.log({ notice: data })
+  console.log(res)
 
-  return data
+  return res
 }
 ```
 
@@ -45,13 +40,14 @@ async function getTest () {
 // options
 interface Config {
   key?: string
-  option: any
   time?: number
+  option: any
 }
 
 interface Redis {
-  host: string
-  port: string
+  master: Array<string>
+  password?: string
+  db?: number
 }
 ```
 
