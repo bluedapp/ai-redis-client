@@ -1,6 +1,6 @@
 {
   "name": "ai-redis-client",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A redis client tools for nodejs and want to look for a girlfriend...",
   "main": "index.js",
   "types": "index.d.ts",

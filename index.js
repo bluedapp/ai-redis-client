@@ -7,6 +7,7 @@ const { createCache } = require('./lib/interval-cache-store')
 function getRedisPool(data, key) {
   let target = {}
   let cache = data.key
+  const interval = 1000 * (data.time || 60)
 
   // https://github.com/Qihoo360/QConf
   if (checkType(data.option, 'Object')) {
@@ -19,10 +20,8 @@ function getRedisPool(data, key) {
     cache = key
   }
 
-  const config = getRedisConfig(target, cache)
-  const interval = 1000 * (data.time || 60)
-
   const pool = createCache(`redis-${cache}`, () => {
+    const config = getRedisConfig(target, cache)
     const redisPool = createRedisClient(config)
 
     setTimeout(() => {
