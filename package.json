@@ -1,6 +1,6 @@
 {
   "name": "ai-redis-client",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A redis client tools for nodejs and want to look for a girlfriend...",
   "main": "index.js",
   "types": "index.d.ts",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/meizikeai/ai-redis-client.git"
+    "url": "git+https://github.com/bluedapp/ai-redis-client.git"
   },
   "engines": {
     "node": ">=8.11.2"
@@ -30,11 +30,11 @@
   "author": "meizikeai@163.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/meizikeai/ai-redis-client/issues"
+    "url": "https://github.com/bluedapp/ai-redis-client/issues"
   },
-  "homepage": "https://github.com/meizikeai/ai-redis-client",
+  "homepage": "https://github.com/bluedapp/ai-redis-client",
   "dependencies": {
-    "redis": "^3.0.2",
+    "redis": "^3.1.2",
     "redis-commands": "^1.7.0"
   }
 }
